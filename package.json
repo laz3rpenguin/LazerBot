@@ -1,0 +1,23 @@
+{
+  "name": "LazerBot",
+  "version": "1.0.0",
+  "description": "Amazing bot by Lazer",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KingDGrizzle/Vlag-Approved-AuroraBot.git"
+  },
+  "author": "Frangu Vlad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KingDGrizzle/Vlag-Approved-AuroraBot/issues"
+  },
+  "homepage": "https://github.com/KingDGrizzle/Vlag-Approved-AuroraBot#readme",
+  "dependencies": {
+    "discord.js": "github:hydrabolt/discord.js#11.1-dev",
+    "erlpack": "github:hammerandchisel/erlpack"
+  }
+}
