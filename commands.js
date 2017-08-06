@@ -1,11 +1,11 @@
 module.exports = {
 	ping: {
-		aliases: ["pang", "pong"],
+		aliases: ["pang", "pong", "about"],
 		maintainer: false,
 		usage: ``,
 	},
 	help: {
-		aliases: ["helpo", "homo", "h", "halp"],
+		aliases: ["help", "h", "halp"],
 		maintainer: false,
 		usage: `[command]`,
 	},
