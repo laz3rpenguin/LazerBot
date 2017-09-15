@@ -13,15 +13,18 @@ const bot = new Discord.Client({
 	],
 });
 
-const switchPlayingGame = (user = bot.user) => {
+/*const switchPlayingGame = (user = bot.user) => {
 	if (config.playingQuotes.length > 2) {
 		let randomQuote = Math.floor(Math.random() * config.playingQuotes.length);
-		console.log(`Changed my playing quote to "${config.playingQuotes[randomQuote]}"`);
-		user.setGame(config.playingQuotes[randomQuote]);
+		//console.log(`Changed my playing quote to "${config.playingQuotes[randomQuote]}"`);
+		//bot.user.setPresence({ streaming: { name: `/help | v0.1(PR)`, type: 0 } })
+		//user.setGame(config.playingQuotes[randomQuote]);
+		//user.setGame({ game: { streaming: `/help | v0.1(PR)`, type: 0 } })
 		setTimeout(switchPlayingGame, 450000);
+		//user.setGame({game: { name: "/help v0.1(PR)", url: "https://www.twitch.tv/meme", type: 2}})
+		user.setGame('/help - v0.1, "https://www.twitch.tv/meme")
 	}
-}
-
+} */
 bot.login(config.token).then(token => {
 	console.log("I'm online");
 }).catch(err => {
@@ -29,8 +32,9 @@ bot.login(config.token).then(token => {
 });
 
 bot.once("ready", () => {
-	console.log(`I'm in ${bot.guilds.size} guilds with ${bot.users.size} total users. Smh..`);
-	switchPlayingGame(bot.user);
+	console.log(`I'm in ${bot.guilds.size} guilds with ${bot.users.size} total users.`);
+	//bot.user.setPresence({game: { name: "/help v0.1(PR)", url: "https://www.twitch.tv/meme", type: 1}})
+	bot.user.setGame('/help | v0.1 (PR)', 'https://www.twitch.tv/#');
 	for (const command in commands) {
 		exports.usage[command] = 0;
 	}
